@@ -1,7 +1,8 @@
 ---
 layout: "default"
-title: "Ability"
+title: "Abilities"
 nav_order: 2
+has_children: true
 ---
 
 <!DOCTYPE html>
@@ -11,15 +12,15 @@ nav_order: 2
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="css/ability.css" />
-    <script type="text/javascript" src="js/lib/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../css/abilities/index.css" />
+    <script type="text/javascript" src="../js/lib/jquery-3.3.1/jquery-3.3.1.min.js"></script>
 </head>
 <body>
     <div id="content">
         <p>I have learned lots of technology when I was developing my applications, such as:</p>
-        <table id="ability-table">
+        <table>
             <tr>
-                <th>Language</th>
+                <th>Technology</th>
                 <th>Proficiency</th>
             </tr>
             <tr>
@@ -98,8 +99,35 @@ nav_order: 2
                 <td>Git version control</td>
                 <td><span class="rating-5"></span></td>
             </tr>
+            <tr>
+                <td>Windows server management</td>
+                <td><span class="rating-3"></span></td>
+            </tr>
+        </table>
+        <p>In short, I am a full-stack Java web developer. My environment is usually</p>
+        <table>
+            <tr>
+                <th></th>
+                <th>Environment</th>
+            </tr>
+            <tr>
+                <td>Frontend</td>
+                <td>HTML, CSS, JavaScript, JSP, struts 2</td>
+            </tr>
+            <tr>
+                <td>Backend</td>
+                <td>Java</td>
+            </tr>
+            <tr>
+                <td>Database</td>
+                <td>MySQL</td>
+            </tr>
+            <tr>
+                <td>Logging</td>
+                <td>Log4j2</td>
+            </tr>
         </table>
     </div>
-    <script type="text/javascript" src="js/ability.js"></script>
+    <script type="text/javascript" src="../js/abilities/index.js"></script>
 </body>
 </html>
