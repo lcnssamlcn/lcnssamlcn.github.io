@@ -1,4 +1,3 @@
-var IMG_DIR = "../img";
 var RATING_MIN = 0;
 var RATING_MAX = 5;
 

@@ -1,0 +1,113 @@
+---
+layout: "default"
+title: "Java EE File Transfer"
+parent: "Projects"
+nav_order: 2
+---
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{{ page.title }}</title>
+</head>
+<body>
+    <div id="content">
+        <h1>{{ page.title }}</h1>
+        <p>Development Date: Jan 2021 - May 2021</p>
+        <p>Development Time: No record</p>
+
+        <h2>Motivation</h2>
+        <p>I create this project because I want to transfer a file from one computer to another. It seems an easy task nowadays because we can buy a USB hard drive to achieve my goal. However, in my job experience, I could not use my USB hard drive in my work computer because it did not trust my USB hard drive. Therefore, I had to upload my files to Google Drive.</p>
+        <p>However, sometimes my files were too large that I had to constantly free up my Google drive space. I cannot afford Google drive storage subscription so I decided to create an application to transfer my files easily and securely.</p>
+
+        <h2>Technology</h2>
+        <p>I have used a number of tools to develop my file transfer program:</p>
+        <table>
+            <tr>
+                <th>Technology</th>
+                <th>Usage</th>
+            </tr>
+            <tr>
+                <td>Java SE 8, Java EE 6</td>
+                <td>Help create server-side web application to upload my files to my server or download my files from my server.</td>
+            </tr>
+            <tr>
+                <td>JBoss EAP 7.0</td>
+                <td>My server.</td>
+            </tr>
+            <tr>
+                <td>MySQL</td>
+                <td>Store information about who can access my server.</td>
+            </tr>
+            <tr>
+                <td>Apache Ant</td>
+                <td>Build tool to pack my application JAR, WAR, EAR easily.</td>
+            </tr>
+            <tr>
+                <td>commons-io-2.5.jar</td>
+                <td>Help read or write file in binary form</td>
+            </tr>
+            <tr>
+                <td>commons-lang3-3.9.jar</td>
+                <td>Help get the entire exception trace.</td>
+            </tr>
+            <tr>
+                <td>log4j-api-2.12.1.jar, log4j-core-2.12.1.jar</td>
+                <td>Logging</td>
+            </tr>
+            <tr>
+                <td>mysql-connector-java-5.1.48.jar</td>
+                <td>Help access MySQL database in Java.</td>
+            </tr>
+        </table>
+
+        <h2>Structure</h2>
+        <p>Here is the general structure of my file transfer applcation:</p>
+        <p><img src="../img/projects/javaee_file_transfer/structure.png" /></p>
+        <ol>
+            <li>
+                <p>Users have to login in order to access their personal server. The login password in database is not saved in raw form but hashed using SHA-512 algorithm.</p>
+                <p><img src="../img/projects/javaee_file_transfer/login.png" /></p>
+            </li>
+            <li>
+                <p>If the login fails, it will ask users to login again.</p>
+                <p><img src="../img/projects/javaee_file_transfer/login_fail.png" /></p>
+            </li>
+            <li>
+                <p>After successful login, you will be forwarded to the GUI interface of the file transfer server. You can download files from the server or upload files to the server by using this application.</p>
+                <p><img src="../img/projects/javaee_file_transfer/interface.png" /></p>
+            </li>
+        </ol>
+
+        <h2>Features</h2>
+        <h3>1. Download file from server</h3>
+        <ol>
+            <li>
+                <p>Click the download icon next to the file name. ("a.jpg" for example.)</p>
+                <p><img src="../img/projects/javaee_file_transfer/download_file_1.png" /></p>
+            </li>
+            <li>
+                <p>File "a.jpg" will be downloaded.</p>
+                <p><img src="../img/projects/javaee_file_transfer/download_file_2.png" /></p>
+            </li>
+        </ol>
+        <h3>2. Upload files to server</h3>
+        <ol>
+            <li>
+                <p>Click "choose file". A browse dialog box will appear. Choose the file you want to upload to the server. Click "upload" button.</p>
+                <p><img src="../img/projects/javaee_file_transfer/upload_file_1.png" /></p>
+            </li>
+            <li>
+                <p>"Upload successful" message should appear after upload. The uploaded file should also appear in the file list.</p>
+                <p><img src="../img/projects/javaee_file_transfer/upload_file_2.png" /></p>
+            </li>
+        </ol>
+        <h3>3. Sort</h3>
+        <p>Clicking the "Name" column will sort all files' name by alphabetical order in ascending order or descending order.</p>
+        <p><img src="../img/projects/javaee_file_transfer/sort.png" /></p>
+    </div>
+</body>
+</html>

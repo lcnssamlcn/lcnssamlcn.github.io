@@ -7,3 +7,6 @@ vendor
 # Junk
 .DS_Store
 *.swp
+
+# GIMP src file
+*.xcf

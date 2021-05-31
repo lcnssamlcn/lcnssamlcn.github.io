@@ -1,0 +1,93 @@
+---
+layout: "default"
+title: "JavaFX Stopwatch"
+parent: "Projects"
+nav_order: 1
+---
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{{ page.title }}</title>
+    <script type="text/javascript" src="../js/lib/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div id="content">
+        <h1>{{ page.title }}</h1>
+
+        <p>Development Date: May 2021 - May 2021</p>
+        <p>Development Time:</p>
+        <table class="dev-time-table">
+            <tr>
+                <th>Run</th>
+                <th>Time</th>
+            </tr>
+            <tr>
+                <td>1st run</td>
+                <td>9hr 32min</td>
+            </tr>
+            <tr>
+                <td>2nd run</td>
+                <td>1hr 56min</td>
+            </tr>
+            <tr>
+                <td>3rd run</td>
+                <td>0hr 57min</td>
+            </tr>
+            <tr>
+                <td>4th run</td>
+                <td>5hr 49min</td>
+            </tr>
+            <tr>
+                <td>5th run</td>
+                <td>0hr 52min</td>
+            </tr>
+        </table>
+
+        <h2>Motivation</h2>
+        <p>I want to have a stopwatch application for offline use because I want to know how fast I can develop a well-made program. I have tried to download stopwatch applications from Mac app store but most of them do not work. Therefore, I have decided to write my own stopwatch program.</p>
+        <p>I have thought about using HTML/CSS/JS to develop the stopwatch program but I usually close my browser tabs by accident. I do not want to close the stopwatch by accident so I chose to use JavaFX to develop my stopwatch application.</p>
+
+        <h2>Technology</h2>
+        <p>I have used a number of tools to develop my stopwatch program:</p>
+        <table>
+            <tr>
+                <th>Technology</th>
+                <th>Usage</th>
+            </tr>
+            <tr>
+                <td>OpenJDK 11, JavaFX SDK 11.0.2 (x64)</td>
+                <td>Toolkit to develop desktop GUI application.</td>
+            </tr>
+            <tr>
+                <td>Apache Ant 1.9.14</td>
+                <td>Build tool to pack and run my stopwatch JAR easily.</td>
+            </tr>
+            <tr>
+                <td>commons-lang-2.6.jar</td>
+                <td>Internal stopwatch API.</td>
+            </tr>
+            <tr>
+                <td>log4j-api-2.12.1.jar, log4j-core-2.12.1.jar</td>
+                <td>Logging</td>
+            </tr>
+            <tr>
+                <td>g++, make</td>
+                <td>Help create executable (.exe) for my stopwatch application (Windows x64)</td>
+            </tr>
+        </table>
+
+        <h2>Screenshots</h2>
+        <p>Windows x64</p>
+        <p><img src="../img/projects/jfx_stopwatch/win_x64.png" /></p>
+        <p>Mac OS X x64</p>
+        <p><img src="../img/projects/jfx_stopwatch/osx_x64.png" /></p>
+    </div>
+
+    <script type="text/javascript" src="../js/globals.js"></script>
+    <script type="text/javascript" src="../js/projects/index.js"></script>
+</body>
+</html>
